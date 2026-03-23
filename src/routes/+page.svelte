@@ -34,16 +34,14 @@
 
     function handleScroll() {
         const scrollOptions: ScrollIntoViewOptions = {
-            behavior: prefersReducedMotion.current ? "instant" : "smooth"
+            behavior: prefersReducedMotion.current ? "instant" : "smooth",
+            block: "start",
+            inline: "nearest",
         }
         if (scrolled) {
             document.documentElement.scrollIntoView(scrollOptions)
         } else {
-            const features = document.querySelector("#features")
-            if (features) {
-                features.scrollIntoView(scrollOptions)
-                features.scrollTop = 20
-            }
+            featuresEl?.scrollIntoView?.(scrollOptions)
         }
     }
 </script>
@@ -89,7 +87,7 @@
             </p>
         </Button>
     </section>
-    <section bind:this={featuresEl} id="features" class="w-full md:my-20 my-10 flex flex-col gap-10 items-center">
+    <section bind:this={featuresEl} class="w-full md:my-20 my-10 flex flex-col gap-10 items-center">
         {#if scrolled}
             {@const flyOptions = prefersReducedMotion.current
                 ? { y: 0, duration: 0, delay: 0 }
