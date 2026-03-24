@@ -7,7 +7,7 @@
 
 <div class="flex flex-col w-full min-h-dvh">
     <Nav />
-    <main class="flex flex-col w-full grow flex-1 overflow-y-auto p-4">
+    <main class="flex flex-col w-full grow flex-1 p-4">
         {@render children?.()}
     </main>
     <Footer />
