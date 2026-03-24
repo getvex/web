@@ -14,3 +14,10 @@ export type Feature = {
     title: string
     description: string
 }
+
+type elements = "how" | "features" | "demo" | "why" | "cta" | "faq" | "btn"
+
+export type ScrollElements = Record<elements, HTMLElement | null>
+export type EnteredStates = Record<Exclude<elements, "btn">, boolean>
+
+export type CleanupFn = () => void
