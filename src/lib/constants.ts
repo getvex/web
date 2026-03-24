@@ -1,6 +1,6 @@
 import { PUBLIC_GITHUB_ORG, PUBLIC_GITHUB_SPONSOR_URL } from "$env/static/public"
 import { BracketsRound, DesktopTower, FileCss, FireSimple, Gear, Heart, HouseLine, PlugCharging } from "@steeze-ui/phosphor-icons"
-import type { Link, Feature, Preview } from "@types"
+import type { Link, Feature, Preview, FAQ } from "@types"
 import { Fluxer } from "@icons/fluxer"
 import { GitHub } from "@icons/github"
 
@@ -79,4 +79,33 @@ export const previews: Preview[] = [
         },
         image_key: "settings"
     }
+]
+
+export const faq: FAQ[] = [
+    {
+        title: "What is Vex?",
+        answer: `<p>No. Fluxer will not ban you for using Vex. In fact, they encourage it!</p>`
+    },
+    {
+        title: "How do I install Vex?",
+        answer: `
+            <p>You can install Vex with the command <code>pnpm install-vex</code>.</p>
+            <p>For in-depth install instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
+        `
+    },
+    {
+        title: "How do I uninstall Vex?",
+        answer: `
+            <p>You can uninstall Vex the same way you installed it, with the command <code>pnpm uninstall-vex</code>.</p>
+            <p>For further in-depth instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
+        `
+    },
+    {
+        title: "Can I use Vex on Fluxer web?",
+        answer: `<p>No. Vex only supports the Fluxer Desktop app (electron). We have no plans to support any other way of using Fluxer.</p>`
+    },
+    {
+        title: "How do I install custom themes?",
+        answer: `<p>You can't yet. This feature is coming soon.</p>`
+    },
 ]

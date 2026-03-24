@@ -107,12 +107,18 @@
 
 @layer base {
     * {
-        @apply border-border;
+        @apply border-border outline-brand;
     }
     body {
         @apply font-mono! bg-background text-primary;
     }
     code {
         @apply bg-primary/5 px-1 py-px rounded border;
+    }
+    html {
+        scrollbar-gutter: stable;
+    }
+    :focus-visible {
+        @apply outline-brand outline-3;
     }
 }

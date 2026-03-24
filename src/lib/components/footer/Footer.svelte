@@ -11,7 +11,7 @@
     <div class="w-full md:p-6 p-4 border flex md:flex-row flex-col md:items-end items-start backdrop-blur-xl gap-2 md:rounded-3xl rounded-2xl justify-between">
         <div class="flex flex-col md:gap-8 gap-4 w-full">
             <div class="flex flex-col gap-4">
-                <a class="flex items-center gap-6 text-primary hover:text-muted-foreground transition-colors" href="/">
+                <a class="flex items-center gap-6 text-primary hover:text-muted-foreground transition-colors w-fit" href="/">
                     <Icon src={Vex} class="w-8 h-auto text-inherit" />
                     <p class="font-bold text-inherit">Vex</p>
                 </a>

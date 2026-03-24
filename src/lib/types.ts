@@ -25,6 +25,11 @@ export type Preview = {
     image_key: string
 }
 
+export type FAQ = {
+    title: string,
+    answer: string
+}
+
 type elements = "how" | "features" | "preview" | "why" | "cta" | "faq" | "btn"
 
 export type ScrollElements = Record<elements, HTMLElement | null>
