@@ -15,7 +15,17 @@ export type Feature = {
     description: string
 }
 
-type elements = "how" | "features" | "demo" | "why" | "cta" | "faq" | "btn"
+export type Preview = {
+    icon?: Link["icon"]
+    title: string
+    description: {
+        desktop: string
+        mobile?: string
+    }
+    image_key: string
+}
+
+type elements = "how" | "features" | "preview" | "why" | "cta" | "faq" | "btn"
 
 export type ScrollElements = Record<elements, HTMLElement | null>
 export type EnteredStates = Record<Exclude<elements, "btn">, boolean>

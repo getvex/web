@@ -33,6 +33,7 @@
 		"@steeze-ui/phosphor-icons": "^2.1.1",
 		"@steeze-ui/svelte-icon": "^1.6.2",
 		"clsx": "^2.1.1",
+		"embla-carousel-svelte": "^8.6.0",
 		"mode-watcher": "^1.1.0",
 		"tailwind-merge": "^3.5.0",
 		"tailwind-variants": "^3.2.2"

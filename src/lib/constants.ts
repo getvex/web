@@ -1,6 +1,6 @@
 import { PUBLIC_GITHUB_ORG, PUBLIC_GITHUB_SPONSOR_URL } from "$env/static/public"
-import { BracketsRound, DesktopTower, FileCss, FireSimple, Heart, PlugCharging } from "@steeze-ui/phosphor-icons"
-import type { Link, Feature } from "@types"
+import { BracketsRound, DesktopTower, FileCss, FireSimple, Gear, Heart, HouseLine, PlugCharging } from "@steeze-ui/phosphor-icons"
+import type { Link, Feature, Preview } from "@types"
 import { Fluxer } from "@icons/fluxer"
 import { GitHub } from "@icons/github"
 
@@ -47,7 +47,36 @@ export const features: Feature[] = [
     },
     {
         icon: { src: DesktopTower, theme: "fill", color: "text-muted-foreground" },
-        "title": "Cross-platform",
-        "description": "Supports Windows and Linux (including Flatpak)."
+        title: "Cross-platform",
+        description: "Supports Windows and Linux (including Flatpak)."
+    }
+]
+
+export const previews: Preview[] = [
+    {
+        icon: { src: HouseLine, theme: "fill", color: "text-muted-foreground" },
+        title: "Vex Home",
+        description: {
+            desktop: "Featuring an information card and a list of quick action buttons to get you started."
+        },
+        image_key: "main"
+    },
+    {
+        icon: { src: PlugCharging, theme: "fill", color: "text-brand" },
+        title: "Plugins List",
+        description: {
+            desktop: "Toggle, hot-reload, and customize any settings provided by the plugin.",
+            mobile: "Toggle, hot-reload, and customize any settings provided by the plugin."
+        },
+        image_key: "plugins"
+    },
+    {
+        icon: { src: Gear, theme: "fill", color: "text-primary" },
+        title: "Native Settings",
+        description: {
+            desktop: "Native settings category featuring pages for managing Vex. Optional plugin provided to reveal the \"Staff Only\" category. Use at your own risk.",
+            mobile: "Native settings category featuring pages for managing Vex."
+        },
+        image_key: "settings"
     }
 ]
