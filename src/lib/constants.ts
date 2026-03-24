@@ -1,4 +1,4 @@
-import { PUBLIC_GITHUB_REPO, PUBLIC_GITHUB_SPONSOR_URL } from "$env/static/public"
+import { PUBLIC_GITHUB_ORG, PUBLIC_GITHUB_SPONSOR_URL } from "$env/static/public"
 import { BracketsRound, DesktopTower, FileCss, FireSimple, Heart, PlugCharging } from "@steeze-ui/phosphor-icons"
 import type { Link, Feature } from "@types"
 import { Fluxer } from "@icons/fluxer"
@@ -10,7 +10,7 @@ export const links: Link[] = [
         icon: { src: Fluxer }
     },
     {
-        href: PUBLIC_GITHUB_REPO,
+        href: PUBLIC_GITHUB_ORG,
         icon: { src: GitHub }
     },
     {
