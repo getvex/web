@@ -25,33 +25,6 @@
                     </div>
                 </Collapsible>
             {/each}
-            <!-- <Collapsible title="Will I get banned for using Vex?" class="bg-primary/5 p-3 w-full! text-start rounded-xl border">
-                <div class="bg-primary/10 p-2 rounded-lg text-xs text-primary/70">
-                    <p>No. Fluxer will not ban you for using Vex. In fact, they encourage it!</p>
-                </div>
-            </Collapsible>
-            <Collapsible title="How do I install Vex?" class="bg-primary/5 p-3 w-full! text-start rounded-xl border">
-                <div class="bg-primary/10 p-2 rounded-lg text-xs text-primary/70">
-                    <p>You can install Vex with the command <code>pnpm install-vex</code>.</p>
-                    <p>For in-depth install instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
-                </div>
-            </Collapsible>
-            <Collapsible title="How do I uninstall Vex?" class="bg-primary/5 p-3 w-full! text-start rounded-xl border">
-                <div class="bg-primary/10 p-2 rounded-lg text-xs text-primary/70">
-                    <p>You can uninstall Vex the same way you installed it, with the command <code>pnpm uninstall-vex</code>.</p>
-                    <p>For further in-depth instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
-                </div>
-            </Collapsible>
-            <Collapsible title="Can I use Vex on Fluxer web?" class="bg-primary/5 p-3 w-full! text-start rounded-xl border">
-                <div class="bg-primary/10 p-2 rounded-lg text-xs text-primary/70">
-                    <p>No. Vex only supports the Fluxer Desktop app (electron). We have no plans to support any other way of using Fluxer.</p>
-                </div>
-            </Collapsible>
-            <Collapsible title="How do I install custom themes?" class="bg-primary/5 p-3 w-full! text-start rounded-xl border">
-                <div class="bg-primary/10 p-2 rounded-lg text-xs text-primary/70">
-                    <p>You can't yet. This feature is coming soon.</p>
-                </div>
-            </Collapsible> -->
         </div>
     </section>
 </div>
