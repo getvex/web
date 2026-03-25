@@ -83,8 +83,8 @@ export const previews: Preview[] = [
 
 export const faq: FAQ[] = [
     {
-        title: "What is Vex?",
-        answer: `<p>No. Fluxer will not ban you for using Vex. In fact, they encourage it!</p>`
+        title: "Will I get banned for using Vex?",
+        answer: `<p>No. Fluxer will not ban you for using client modifications. In fact, they encourage it!</p>`
     },
     {
         title: "How do I install Vex?",
