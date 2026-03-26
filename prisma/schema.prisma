@@ -1,0 +1,42 @@
+generator client {
+    provider     = "prisma-client"
+    output       = "./generated/prisma"
+}
+
+datasource db {
+    provider = "sqlite"
+}
+
+model Plugin {
+    id              String @id @unique
+    name            String
+    description     String
+    authors         Json
+    version         String
+    restartRequired RestartRequired? @default(none)
+    dependencies    Json?
+    fileName        String?
+
+    @@index([id, name, description])
+}
+
+model Theme {
+    name        String
+    description String
+    author      String
+    version     String
+    website     String?
+    fileName    String @unique @id
+
+    @@index([fileName, name])
+}
+
+model Cache {
+    key         String @id @unique
+    expires     Int
+}
+
+enum RestartRequired {
+    none
+    restart
+}

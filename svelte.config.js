@@ -17,6 +17,9 @@ const config = {
             "@remote/*"    : "./src/lib/remote/*",
             "@constants"   : "./src/lib/constants.ts",
             "@types"       : "./src/lib/types.ts",
+            "@db"          : "./src/lib/server/db/index.ts",
+            "@octo"        : "./src/lib/server/octo/index.ts",
+            "@generated/*" : "./prisma/generated/prisma/*",
         }
     },
 	vitePlugin: {

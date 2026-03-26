@@ -1,22 +1,35 @@
 import type { IconSource } from "@steeze-ui/svelte-icon"
 
+export type CacheEntry<T> = {
+    data: T
+    expires: number
+}
+
+type Icon = {
+    src: IconSource
+    theme?: string
+    color?: string
+}
+
 export type Link = {
     href: string
-    icon: {
-        src: IconSource
-        theme?: string
-        color?: string
-    }
+    icon: Icon
+}
+
+export type NavLink = {
+    href: string
+    text: string
+    icon?: Partial<Icon>
 }
 
 export type Feature = {
-    icon: Link["icon"]
+    icon: Icon
     title: string
     description: string
 }
 
 export type Preview = {
-    icon?: Link["icon"]
+    icon?: Icon
     title: string
     description: {
         desktop: string

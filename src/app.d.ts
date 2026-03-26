@@ -1,9 +1,12 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
+import type { Theme, Plugin } from "@generated/client"
+
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {
+            themes: Theme[]
+            plugins: Plugin[]
+        }
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
