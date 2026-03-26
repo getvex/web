@@ -1,6 +1,6 @@
+import { BracketsRound, DesktopTower, FileCss, Files, FireSimple, Gear, Heart, HouseLine, Palette, PlugCharging, QuestionMark } from "@steeze-ui/phosphor-icons"
 import { PUBLIC_GITHUB_ORG, PUBLIC_GITHUB_SPONSOR_URL } from "$env/static/public"
-import { BracketsRound, DesktopTower, FileCss, FireSimple, Gear, Heart, HouseLine, PlugCharging } from "@steeze-ui/phosphor-icons"
-import type { Link, Feature, Preview, FAQ } from "@types"
+import type { Link, Feature, Preview, FAQ, NavLink } from "@types"
 import { Fluxer } from "@icons/fluxer"
 import { GitHub } from "@icons/github"
 
@@ -16,6 +16,29 @@ export const links: Link[] = [
     {
         href: PUBLIC_GITHUB_SPONSOR_URL,
         icon: { src: Heart, theme: "fill" }
+    },
+]
+
+export const navLinks: NavLink[] = [
+    {
+        href: "/plugins",
+        text: "Plugins",
+        icon: { src: PlugCharging, theme: "fill" }
+    },
+    {
+        href: "/themes",
+        text: "Themes",
+        icon: { src: Palette, theme: "fill" }
+    },
+    {
+        href: "/faq",
+        text: "FAQ",
+        icon: { src: QuestionMark, theme: "fill" }
+    },
+    {
+        href: "/docs",
+        text: "Docs",
+        icon: { src: Files, theme: "fill" }
     },
 ]
 
