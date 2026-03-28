@@ -67,7 +67,7 @@
 <div class="relative flex w-full items-center flex-col gap-10">
     <section class="flex flex-col gap-10 md:max-w-2/3 max-w-full text-center items-center justify-center min-h-[80vh]">
         <Icon src={Vex} class="w-40 h-auto md:block hidden drop-shadow-lg" />
-        <h1 class="text-7xl font-black dark:drop-shadow-[0_0_10px_color-mix(in_oklch,var(--primary)_20%,oklch(0%_0_0/0))] drop-shadow-[0_0_10px_color-mix(in_oklch,var(--primary)_50%,oklch(0%_0_0/0))]">
+        <h1 class="md:text-7xl text-5xl font-black dark:drop-shadow-[0_0_10px_color-mix(in_oklch,var(--primary)_20%,oklch(0%_0_0/0))] drop-shadow-[0_0_10px_color-mix(in_oklch,var(--primary)_50%,oklch(0%_0_0/0))]">
             A
             <span class="relative">
                 <span class="w-full left-0 bottom-1 drop-shadow-xl -rotate-1 absolute h-3 -z-1 bg-linear-to-r from-brand-start to-brand-end"></span>
