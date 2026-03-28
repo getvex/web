@@ -129,6 +129,9 @@ export const faq: FAQ[] = [
     },
     {
         title: "How do I install custom themes?",
-        answer: `<p>You can't yet. This feature is coming soon.</p>`
+        answer: `
+            <p>You can install custom themes by putting <code>.css</code> files into your Vex themes folder.</p>
+            <p>For further in-depth instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
+        `
     },
 ]
