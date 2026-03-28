@@ -12,8 +12,10 @@
     import { tick } from "svelte"
 
     let isMobile = new IsMobile()
+    let nav = $state<HTMLElement | null>(null)
     let ref = $state<HTMLElement | null>(null)
     let open = $state(false)
+    let observer = $state<ResizeObserver | null>(null)
 
     let offset = $state(0)
 
@@ -32,11 +34,38 @@
     }
 
     $effect(() => {
+        if (!nav) {
+            document.documentElement.style.setProperty(
+                "--nav-height",
+                isMobile.current ? "66px" : "86px"
+            )
+        } else {
+            document.documentElement.style.setProperty(
+                "--nav-height",
+                `${nav.getBoundingClientRect().height}px`
+            )
+        }
+
+        if (!observer) {
+            observer = new ResizeObserver((entries) => {
+                document.documentElement.style.setProperty(
+                    "--nav-height",
+                    `${nav!.getBoundingClientRect().height}px`
+                )
+            })
+        }
+
+        if (nav) {
+            observer.observe(nav)
+        }
+
         if (!isMobile.current) {
             open = false
         } else {
             updateOffset()
         }
+
+        return () => observer?.disconnect()
     })
 
     async function handleOpenMenu() {
@@ -48,7 +77,7 @@
 
 <svelte:window onresize={handleResize} />
 
-<header class="w-full p-3 sticky top-0 left-0 z-999">
+<header bind:this={nav} class="w-full p-3 sticky top-0 left-0 z-999">
     <div class="w-full md:p-6 p-4 border flex items-center backdrop-blur-xl md:rounded-3xl rounded-2xl justify-between">
         <a class="flex items-center gap-6" href="/">
             <Icon src={Vex} class="w-8 h-auto" />
@@ -59,18 +88,6 @@
                 <a href={link.href} class="md:block hidden text-xs brightness-90 hover:brightness-150 transition-all">
                     {link.text}
                 </a>
-                <!-- <a href="/plugins" class="text-xs brightness-90 hover:brightness-150 transition-all">
-                    Plugins
-                </a>
-                <a href="/themes" class="text-xs brightness-90 hover:brightness-150 transition-all">
-                    Themes
-                </a>
-                <a href="/faq" class="text-xs brightness-90 hover:brightness-150 transition-all">
-                    FAQ
-                </a>
-                <a href="/docs" class="text-xs brightness-90 hover:brightness-150 transition-all md:block hidden">
-                    Docs
-                </a> -->
             {/each}
             <ThemeToggle />
             <div class="relative md:hidden flex" bind:this={ref}>

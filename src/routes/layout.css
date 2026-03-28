@@ -122,3 +122,18 @@
         @apply outline-brand outline-3;
     }
 }
+
+html:not(.dark) .shiki {
+    background-color: var(--background) !important;
+}
+html:not(.dark) .shiki * {
+    color: var(--shiki-light) !important;
+}
+
+pre.shiki > code {
+    all: unset;
+}
+
+pre.shiki {
+    @apply p-2 text-nowrap md:text-wrap flex-nowrap md:flex-wrap break-all pointer-events-auto! overflow-x-auto;
+}

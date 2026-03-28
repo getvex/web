@@ -74,3 +74,16 @@ export type ScrollElements = Record<elements, HTMLElement | null>
 export type EnteredStates = Record<Exclude<elements, "btn">, boolean>
 
 export type CleanupFn = () => void
+
+export type SidebarRouteItem = {
+    title: string
+    url: string
+    icon?: IconSource
+    newTab?: boolean
+}
+
+export type SidebarRoute = {
+    title: string
+    icon: IconSource
+    items: SidebarRouteItem[]
+}

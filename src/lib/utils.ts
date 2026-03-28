@@ -1,3 +1,4 @@
+import { routes, routeMap } from "@components/sidebar"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -42,4 +43,32 @@ export function sanitizeName(name: string) {
         .toLowerCase()
         .replace(/\s+/g, "-")
         .replace(/(?![a-zA-Z0-9-]).{1}/g, "")
+}
+
+export function sanitizeDocsTitle(title: string) {
+    return title
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[?]{1}/g, "")
+}
+
+export const delay = (ms: number) => new Promise(res => setTimeout(res, ms))
+
+export function getRouteIndex(pathname: string) {
+    return routeMap.findIndex(r => r.url === pathname)
+}
+
+export function getNextRoute(pathname: string) {
+    const i = getRouteIndex(pathname)
+    return routeMap[i + 1] ?? null
+}
+
+export function getPreviousRoute(pathname: string) {
+    const i = getRouteIndex(pathname)
+    return routeMap[i - 1] ?? null
+}
+
+export function getCurrentRoute(pathname: string) {
+    return routeMap[getRouteIndex(pathname)] ?? null
 }
