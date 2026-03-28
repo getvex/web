@@ -31,6 +31,13 @@ model Theme {
     @@index([fileName, name])
 }
 
+model Css {
+    id  String @id @unique
+    css String
+
+    @@index([css])
+}
+
 model Cache {
     key         String @id @unique
     expires     Int

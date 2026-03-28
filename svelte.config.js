@@ -20,6 +20,14 @@ const config = {
             "@db"          : "./src/lib/server/db/index.ts",
             "@octo"        : "./src/lib/server/octo/index.ts",
             "@generated/*" : "./prisma/generated/prisma/*",
+        },
+        experimental: {
+            remoteFunctions: true
+        }
+    },
+    compilerOptions: {
+        experimental: {
+            async: true
         }
     },
 	vitePlugin: {

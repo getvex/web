@@ -1,5 +1,30 @@
 import type { IconSource } from "@steeze-ui/svelte-icon"
 
+export interface VexPlugin {
+    name: string
+    description: string
+    version: string
+    fileName?: string | null
+    id: string
+    authors: string[]
+    restartRequired: RestartRequired
+    dependencies?: string[] | null
+}
+
+export interface VexTheme {
+    fileName: string
+    author: string
+    description: string
+    name: string
+    version: string
+    website?: string | null
+}
+
+enum RestartRequired {
+    None = "none",
+    Restart = "restart"
+}
+
 export type CacheEntry<T> = {
     data: T
     expires: number
