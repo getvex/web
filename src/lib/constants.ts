@@ -69,9 +69,9 @@ export const features: Feature[] = [
         description: "Includes a handlfull of pre-made plugins to showcase the power of Vex."
     },
     {
-        icon: { src: DesktopTower, theme: "fill", color: "text-muted-foreground" },
-        title: "Cross-platform",
-        description: "Supports Windows and Linux (including Flatpak)."
+        icon: { src: Palette, theme: "fill", color: "text-amber-300" },
+        title: "Custom Themes",
+        description: "Custom theme support to make Fluxer look however you want."
     }
 ]
 
@@ -132,6 +132,28 @@ export const faq: FAQ[] = [
         answer: `
             <p>You can install custom themes by putting <code>.css</code> files into your Vex themes folder.</p>
             <p>For further in-depth instructions, please refer to our <a href="/docs" class="link">documentation</a>.</p>
+        `
+    },
+    {
+        title: "How do I share my plugin on Vex?",
+        answer: `
+            <p>There are a couple of ways you can get your plugin on Vex:</p>
+            <ul class="list-disc list-inside space-y-0.5 marker:text-brand text-xs mt-2">
+                <li class="ml-2">Fork the <a href="${PUBLIC_GITHUB_ORG}/vex" target="_blank" class="link">Vex repository</a> and submit a Pull Request to add your plugin.</li>
+                <li class="ml-2">Send me a DM on Fluxer <b>@bizo#1000</b></li>
+                <li class="ml-2">Join the <a href="/join" target="_blank" class="link">Vex Community</a> and send your plugin file into the <b>plugin-showcase</b> channel</li>
+            </ul>
+        `
+    },
+    {
+        title: "How do I share my theme on Vex?",
+        answer: `
+            <p>There are a couple of ways you can get your theme on Vex:</p>
+            <ul class="list-disc list-inside space-y-0.5 marker:text-brand text-xs mt-2">
+                <li class="ml-2">Fork the <a href="${PUBLIC_GITHUB_ORG}/vex" target="_blank" class="link">Vex repository</a> and submit a Pull Request to add your theme.</li>
+                <li class="ml-2">Send me a DM on Fluxer <b>@bizo#1000</b></li>
+                <li class="ml-2">Join the <a href="/join" target="_blank" class="link">Vex Community</a> and send your plugin file into the <b>#theme-showcase</b> channel</li>
+            </ul>
         `
     },
 ]
