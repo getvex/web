@@ -1,10 +1,10 @@
 <script lang="ts">
     import { Separator } from "@components/separator"
-    import type { Theme } from "@generated/client"
     import { Button } from "@components/button"
     import { sanitizeName } from "@lib/utils"
+    import type { VexTheme } from "@types"
 
-    const { theme }: { theme: Theme } = $props()
+    const { theme }: { theme: VexTheme } = $props()
 
     const sanitized = $derived(sanitizeName(theme.name))
 </script>

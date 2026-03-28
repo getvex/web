@@ -23,6 +23,19 @@ export function pluralize(word: string, count: number, includeValue: boolean = t
     return string
 }
 
+export function formatArray(array: string[]) {
+    let formatted = []
+    if (array.length === 1) {
+        formatted.push(`<b>${array[0]}</b>`)
+    } else {
+        let last = array[array.length - 1]
+        let rest = array.slice(0, -1)
+        formatted.push(rest.map((s) => `<b>${s}</b>`).join(", "))
+        formatted.push(`and <b>${last}</b>`)
+    }
+    return formatted.join(" ")
+}
+
 export function sanitizeName(name: string) {
     return name
         .trim()
