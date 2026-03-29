@@ -6,14 +6,24 @@
     import { docs } from "@stores/sidebar"
     import { page } from "$app/state"
 
-    // let currentPage = $derived(routes.find(r => r.items.find(i => i.url === page.url.pathname)))
-    // let currentItem = $derived(currentPage?.items.find(i => i.url === page.url.pathname))
     const current = $derived(getCurrentRoute(page.url.pathname))
 
     const { children } = $props()
+
+    $effect(() => {
+        if (page.url?.hash) {
+            document.body.scrollTop = document.documentElement.scrollTop - 100
+        }
+        for (const el of document.querySelectorAll(".section-highlighted")) {
+            el.classList.remove("section-highlighted")
+        }
+        let reference = document.getElementById(page.url?.hash?.replace("#", "")) as HTMLElement
+        if (!reference) return
+        reference.classList.add("section-highlighted")
+    })
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col" id="docs">
     <Sidebar
         state={docs}
         title="Docs"

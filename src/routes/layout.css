@@ -137,3 +137,11 @@ pre.shiki > code {
 pre.shiki {
     @apply p-2 text-nowrap md:text-wrap flex-nowrap md:flex-wrap break-all pointer-events-auto! overflow-x-auto;
 }
+
+#docs [id] {
+    scroll-margin-top: 20vh;
+}
+
+.section-highlighted {
+    @apply my-2 py-3 rounded-xl ring-3 ring-brand/80 font-bold bg-primary/10 pl-4 text-primary
+}
