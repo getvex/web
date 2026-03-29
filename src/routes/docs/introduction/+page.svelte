@@ -13,7 +13,7 @@
             Vex lets you load, manage, and build plugins that modify and extend Fluxer's desktop client. It injects into the Electron app at the preload level, hooks into Fluxer's internal module system, and provides a native-looking settings panel for managing your plugins. This will not work with the Fluxer web app.
         </p>
         <p class="text-sm text-muted-foreground">
-            Vex currently supports <b>Windows</b> and some<b>Linux</b> distros. Efforts are underway to add full Linux support, while <b>macOS</b> support is not planned.
+            Vex currently supports <b>Windows</b> and some <b>Linux</b> distros. Efforts are underway to add full Linux support, while <b>macOS</b> support is not planned.
         </p>
     </div>
     <Separator />
