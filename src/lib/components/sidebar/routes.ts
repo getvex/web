@@ -15,6 +15,10 @@ export const routes: SidebarRoute[] = [
                 url: "/docs/installation"
             },
             {
+                title: "Development",
+                url: "/docs/development"
+            },
+            {
                 title: "Usage",
                 url: "/docs/usage"
             }

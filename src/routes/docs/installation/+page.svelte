@@ -49,7 +49,7 @@
         <SectionTitle title="Update Vex" />
         <div class="flex flex-col gap-2">
             <p class="text-sm text-muted-foreground">
-                After pulling new changes from GitHub, you will need to build and re-patch Vex to apply the changes
+                After pulling new changes from GitHub, you will need to build and re-patch Vex to apply the changes:
             </p>
             <Codeblock lang="shell" code={snippets.updateCommand} />
             <p class="text-sm text-muted-foreground">
@@ -72,24 +72,5 @@
                 Then simply restart Fluxer.
             </p>
         </div>
-    </div>
-    <Separator />
-    <div class="flex flex-col gap-5">
-        <SectionTitle title="Development" />
-        <p class="text-sm font-bold">Development setup:</p>
-        <Codeblock
-            lang="shell"
-            code={snippets.devSetup}
-        />
-        <p class="text-sm font-bold mt-4">For iterating on the renderer:</p>
-        <Codeblock
-            lang="shell"
-            code={snippets.devRenderer}
-        />
-        <p class="text-sm font-bold mt-4">For iterating on the installer or preload (asar changes):</p>
-        <Codeblock
-            lang="shell"
-            code={snippets.devInstallerOrPreload}
-        />
     </div>
 </div>
