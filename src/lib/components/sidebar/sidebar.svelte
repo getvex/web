@@ -56,7 +56,7 @@
     <div
         class={cn(
             "transition-transform duration-300 p-4 bg-linear-to-b dark:from-primary/2 from-white dark:to-primary/0 to-white/30 flex flex-col gap-2 select-none border dark:border-primary/10 h-[calc(100dvh-var(--nav-height))] overflow-y-auto",
-            isMobile.current ? "absolute h-screen top-0 left-0 z-9999 backdrop-blur-xl w-[85%]" : "fixed top-(--nav-height) w-65 rounded-2xl",
+            isMobile.current ? "fixed h-screen top-0 left-0 z-9999 backdrop-blur-xl w-[85%]" : "fixed top-(--nav-height) w-65 rounded-2xl",
             $sidebarState
                 ? isMobile.current ? "" : ""
                 : isMobile.current ? "-translate-x-full" : "-translate-x-full left-0"
@@ -102,21 +102,16 @@
         </div>
     </div>
     <div class={cn(
-        "flex flex-col gap-4 pt-2 md:px-4 transition-all duration-300 w-full z-700",
+        "flex flex-col gap-4 transition-all duration-300 w-full z-700",
         $sidebarState
-            ? isMobile.current ? "ml-0" : "ml-65"
+            ? isMobile.current ? "ml-0" : "ml-65 pl-4"
             : isMobile.current ? "ml-0" : "ml-0"
     )}>
-        <div class="sticky top-(--nav-height) flex items-center gap-2">
+        <div class="sticky top-(--nav-height) flex items-center gap-1 p-2 backdrop-blur-lg z-400 rounded-xl border border-primary/2 bg-primary/1">
             <Button
                 variant="ghost"
-                size="icon-sm"
-                class={cn(
-                    " bg-primary/2! border-0! backdrop-blur-lg",
-                    $sidebarState
-                        ? isMobile.current ? "-ml-2!" : ""
-                        : "-ml-2!"
-                )}
+                size="icon"
+                class="bg-primary/5! border-0! size-7"
                 onclick={() => sidebarState.set(!$sidebarState)}
             >
                 <Icon src={SidebarTrigger} theme="bold" class="size-4" />

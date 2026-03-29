@@ -1,7 +1,9 @@
+import { PUBLIC_GITHUB_ORG } from "$env/static/public"
+
 export const updateCommand = `pnpm build
 pnpm repair-vex`
 
-export const devSetup = `git clone https://github.com/bizojs/vex.git
+export const devSetup = `git clone ${PUBLIC_GITHUB_ORG}/vex.git
 cd vex
 pnpm install
 pnpm build
