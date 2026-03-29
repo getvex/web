@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { clickOutside, escape } from "@actions/clickOutside"
     import { IsMobile } from "@lib/hooks/is-mobile.svelte"
     import { ThemeToggle } from "@components/theme-toggle"
-    import { clickOutside, escape, tapOutside } from "@actions/clickOutside"
     import { List } from "@steeze-ui/phosphor-icons"
     import { Icon } from "@steeze-ui/svelte-icon"
+    import { onNavigate } from "$app/navigation"
     import { Button } from "@components/button"
     import { cubicInOut } from "svelte/easing"
     import { navLinks } from "@lib/constants"
@@ -66,6 +67,10 @@
         }
 
         return () => observer?.disconnect()
+    })
+
+    onNavigate(() => {
+        if (open) open = false
     })
 
     async function handleOpenMenu() {
