@@ -11,7 +11,7 @@
 	const prev = $derived(getPreviousRoute(page.url.pathname))
 </script>
 
-<div class="flex gap-1 items-center">
+<div class="flex gap-1 items-center w-full justify-between">
     {@render PageButton("prev", prev)}
     {@render PageButton("next", next)}
 </div>
@@ -19,7 +19,7 @@
 {#snippet PageButton(type: "next" | "prev", item: SidebarRouteItem)}
     <Button
         onclick={() => goto(item.url)}
-        variant="default"
+        variant={item ? "brand" : "muted"}
         size="icon"
         class="size-7"
         disabled={!item}

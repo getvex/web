@@ -6,7 +6,7 @@
     import { Button } from "@components/button"
     import { page } from "$app/state"
 
-    let docs = $derived<DocsHelper>(new DocsHelper(page.url.origin + page.url.pathname))
+    let docs = $derived<DocsHelper>(new DocsHelper(`${page.url.origin}${page.url.pathname}`))
 
     let { title, code = false } = $props()
 
@@ -17,6 +17,7 @@
     <Button
         variant="ghost"
         size="icon-sm"
+        class="rounded-xl"
         onclick={() => docs.copyLink(sanitized)}
         disabled={docs.isCopying(sanitized)}
     >
